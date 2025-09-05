@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om More | Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic Reset and Body Styling */
+      body {
+        font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Changed to column for stacking sections */
+        align-items: center;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Main container to structure the layout */
+      .container {
+        width: 90%;
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 4rem 2rem; /* Increased padding */
+        flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+      }
+
+      /* Wrapper for additional content sections */
+      .main-content {
+        width: 90%;
+        max-width: 1000px;
+        padding: 0 2rem 4rem 2rem;
+      }
+
+      /* Section styling */
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 0.5rem;
+      }
+
+      /* Left side content block */
+      .intro-text {
+        flex-basis: 55%; /* Takes up about 55% of the container width */
+        min-width: 300px; /* Ensures it doesn't get too squished */
+      }
+
+      /* Right side content block */
+      .contact-links {
+        flex-basis: 35%; /* Takes up about 35% of the container width */
+        min-width: 200px;
+        padding-top: 1rem; /* Align with intro text */
+      }
+
+      /* Text Styling */
+      .intro-text p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .intro-text .greeting {
+        font-size: 1.2rem;
+      }
+
+      .intro-text .name {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0.5rem 0;
+      }
+
+      .intro-text .tagline {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+
+      .contact-links h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-links h3:first-child {
+        margin-top: 0;
+      }
+
+      .contact-links a {
+        text-decoration: none; /* Removes underline from links */
+        color: #000;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .contact-links a:hover {
+        color: #007bff;
+      }
+
+      .download-cv {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #000;
+        color: #fff !important;
+        border-radius: 5px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .download-cv:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      /* Skills Section */
+      .skills-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .skills-list li {
+        background-color: #f0f0f0;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-size: 0.9rem;
+      }
+
+      /* Experience Section */
+      .experience-item {
+        margin-bottom: 2rem;
+      }
+      .experience-item h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+      }
+      .experience-item .meta {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0.25rem 0 0.75rem 0;
+      }
+      .experience-item p {
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Responsive adjustments for smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 2rem 1rem;
+        }
+        .main-content {
+          padding: 0 1rem 2rem 1rem;
+        }
+        .intro-text,
+        .contact-links {
+          flex-basis: 100%;
+          width: 100%;
+        }
+        .contact-links {
+          padding-top: 3rem;
+        }
+        .intro-text .name {
+          font-size: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro-text">
+        <p class="greeting">👋 Holis, I'm</p>
+        <h1 class="name">Om</h1>
+        <p class="tagline">
+          A full-stack developer with 5 years of experience.
+        </p>
+        <p>I love building and designing. Currently Learning OS and Svelte.</p>
+      </div>
+
+      <div class="contact-links">
+        <h3>Contact</h3>
+        <a href="mailto:ommore501@gmail.com">ommore501@gmail.com</a>
+        <a href="https://t.me/OmMore" target="_blank" rel="noopener noreferrer"
+          >Telegram</a
+        >
+
+        <h3>Find me on</h3>
+        <a
+          href="https://github.com/thisisommore"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          href="https://linkedin.com/in/ommore"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+
+        <a
+          href="https://ommore.xyz/Om_More_Resume.pdf"
+          class="download-cv"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Download CV</a
+        >
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="section" id="about">
+        <h2>About me</h2>
+        <p>
+          I am full stack builder, I love to lead and work with teams. I have
+          been participating in Hackathons to make new friends and grow my
+          network. I started from Angular, React and grown my stack with modern
+          tech like Rust, GoLang.
+          <br /><br />
+          My friends are always amused by my productivity, and walking/running
+          is secret sauce for it.
+          <br /><br />
+          You will find me building and talking about Octav3, a web3 music
+          startup which improves user expirence by introducing things like
+          community(of fans), NFT tickets all within single platform.
+        </p>
+      </div>
+
+      <!-- <div class="section" id="projects">
+        <h2>My projects</h2>
+        <p>Details about my projects will be here soon.</p>
+      </div> -->
+
+      <div class="section" id="skills">
+        <h2>My skills</h2>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Next.js</li>
+          <li>Node.js</li>
+          <li>Git</li>
+          <li>Tailwind</li>
+          <li>Rust</li>
+          <li>MongoDB</li>
+          <li>Redux</li>
+          <li>GraphQL</li>
+          <li>Apollo</li>
+          <li>Express</li>
+          <li>PostgreSQL</li>
+          <li>Python</li>
+          <li>GoLang</li>
+          <li>Solidity</li>
+          <li>C</li>
+          <li>C++</li>
+        </ul>
+      </div>
+
+      <div class="section" id="experience">
+        <h2>My experience</h2>
+        <div class="experience-item">
+          <h3>Senior Software Developer at Sun Motors</h3>
+          <div class="meta">Remote | 2025</div>
+          <p>
+            Got invited by friend to help him. Help them scalling inventory from
+            10-20k vehicle to 150k+ vehicles.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Software Developer at MetaBot</h3>
+          <div class="meta">Remote | 2024</div>
+          <p>
+            Joined some communities and meet great founder, liked the idea of
+            using AI to simply web3 actions for users, joined the team and build
+            first MVP.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Junior Software Developer at Kodex</h3>
+          <div class="meta">Remote | 2023</div>
+          <p>
+            Took some break, did some hackathons, learned Rust and then got
+            invitation to join Kodex, a startup working on ENS marketplace, got
+            to work with well expirenced seniors and got chance to apply my Rust
+            skills.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Software Developer at LazarusNetwork</h3>
+          <div class="meta">Remote | 2022</div>
+          <p>
+            Bootstrapped by same founder as Revotic, the founder invited me join
+            full time and the expirence from here went to the moon.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Golang Intern at Revotic Engineering</h3>
+          <div class="meta">Remote | 2021 - 2022</div>
+          <p>
+            I always wondered how hard it is to create APIs of own, I learned
+            NodeJS and still was unhappy with performance, so decided to learn
+            Go, and immediatly decided to purse my career around it.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Angular + Ionic Intern at Torit Innovations</h3>
+          <div class="meta">Remote - Bengaluru | 2020 - 2021</div>
+          <p>
+            I immedietly got this role after completing my previous internship,
+            here I got change to work on Ionic heavly and also there were client
+            projects. Here I got chance to meet amazing peoples.
+          </p>
+        </div>
+        <div class="experience-item">
+          <h3>Angular Intern at Swabhav Tech Labs</h3>
+          <div class="meta">Remote - Mumbai | 2020</div>
+          <p>
+            I worked on real time projects with client and seniors. Also I lead
+            a team for Ionic App version of already live website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
