@@ -26,6 +26,10 @@
         -moz-osx-font-smoothing: grayscale;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       /* Main container to structure the layout */
       .container {
         width: 90%;
@@ -165,9 +169,14 @@
         color: #666;
         margin: 0.25rem 0 0.75rem 0;
       }
-      .experience-item p {
+      .experience-item p,
+      .experience-item ul {
         line-height: 1.6;
         margin: 0;
+        padding-left: 1rem;
+      }
+      .experience-item ul {
+        margin-top: 0.5rem;
       }
 
       /* Responsive adjustments for smaller screens */
@@ -200,15 +209,19 @@
         <p class="greeting">👋 Holis, I'm</p>
         <h1 class="name">Om</h1>
         <p class="tagline">
-          A full-stack developer with 5 years of experience.
+          Full-stack developer • Introducing the world to web3 • Gitpod
+          Community Hero
         </p>
-        <p>I love building and designing. Currently Learning OS and Svelte.</p>
+        <p>I love building and designing. Currently learning OS and Svelte.</p>
       </div>
 
       <div class="contact-links">
         <h3>Contact</h3>
         <a href="mailto:ommore501@gmail.com">ommore501@gmail.com</a>
-        <a href="https://t.me/Teri12311" target="_blank" rel="noopener noreferrer"
+        <a
+          href="https://t.me/Teri12311"
+          target="_blank"
+          rel="noopener noreferrer"
           >Telegram</a
         >
 
@@ -226,6 +239,9 @@
           >LinkedIn</a
         >
 
+        <h3>Location</h3>
+        <a href="#">Goregaon, Maharashtra, India</a>
+
         <a
           href="https://ommore.xyz/Om_More_Resume.pdf"
           class="download-cv"
@@ -238,49 +254,42 @@
 
     <div class="main-content">
       <div class="section" id="about">
-        <h2>About me</h2>
+        <h2>Summary</h2>
         <p>
-          I am full stack builder, I love to lead and work with teams. I have
-          been participating in Hackathons to make new friends and grow my
-          network. I started from Angular, React and grown my stack with modern
-          tech like Rust, GoLang.
-          <br /><br />
-          My friends are always amused by my productivity, and walking/running
-          is secret sauce for it.
-          <br /><br />
-          You will find me building and talking about Octav3, a web3 music
-          startup which improves user expirence by introducing things like
-          community(of fans), NFT tickets all within single platform.
+          I started out tweaking old PCs so I could play games, and that
+          curiosity snowballed into a career in software. Today I work across
+          Go, TypeScript/Node.js, Rust, and the web3 stack (Solidity, The Graph,
+          cryptography), building fast backends, AI-assisted experiences, and
+          scalable infra. I enjoy leading small teams, shipping quickly, and
+          constantly experimenting.
         </p>
       </div>
-
-      <!-- <div class="section" id="projects">
-        <h2>My projects</h2>
-        <p>Details about my projects will be here soon.</p>
-      </div> -->
 
       <div class="section" id="skills">
         <h2>My skills</h2>
         <ul class="skills-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Node.js</li>
-          <li>Git</li>
-          <li>Tailwind</li>
+          <li>LangChain</li>
+          <li>NestJS</li>
           <li>Rust</li>
-          <li>MongoDB</li>
-          <li>Redux</li>
-          <li>GraphQL</li>
-          <li>Apollo</li>
-          <li>Express</li>
-          <li>PostgreSQL</li>
-          <li>Python</li>
           <li>GoLang</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Next.js</li>
+          <li>React</li>
+          <li>GraphQL</li>
           <li>Solidity</li>
+          <li>The Graph</li>
+          <li>MongoDB</li>
+          <li>PostgreSQL</li>
+          <li>Kubernetes</li>
+          <li>IPFS</li>
+          <li>Gin (Go)</li>
+          <li>go-ethereum</li>
+          <li>Reservoir</li>
+          <li>Recharts</li>
+          <li>Telegram Bots</li>
+          <li>Tailwind</li>
+          <li>Python</li>
           <li>C</li>
           <li>C++</li>
         </ul>
@@ -288,68 +297,184 @@
 
       <div class="section" id="experience">
         <h2>My experience</h2>
+
         <div class="experience-item">
-          <h3>Senior Software Developer at Sun Motors</h3>
-          <div class="meta">Remote | 2025</div>
-          <p>
-            Got invited by friend to help him. Help them scalling inventory from
-            10-20k vehicle to 150k+ vehicles.
-          </p>
+          <h3>Senior Software Engineer — AutoFintech / Sun Motors</h3>
+          <div class="meta">Remote | Jan 2025 - Jul 2025</div>
+          <ul>
+            <li>
+              Scaled inventory from ~10-20k to 150k+ by adding critical MongoDB
+              indexes and parallelizing count/results queries for snappy search
+              UX.
+            </li>
+            <li>
+              Shipped Google Chat-integrated cron monitoring posting job
+              start/complete events for real-time visibility.
+            </li>
+            <li>
+              Built an AI CRM chatbot with LangGraph to book test drives, route
+              calls, create follow-ups, and answer buyer questions.
+            </li>
+          </ul>
         </div>
+
         <div class="experience-item">
-          <h3>Software Developer at MetaBot</h3>
-          <div class="meta">Remote | 2024</div>
-          <p>
-            Joined some communities and meet great founder, liked the idea of
-            using AI to simply web3 actions for users, joined the team and build
-            first MVP.
-          </p>
+          <h3>Software Engineer — MetaBot</h3>
+          <div class="meta">Remote | Dec 2023 - Jan 2025</div>
+          <ul>
+            <li>
+              Integrated OpenAI to let users execute web3 actions
+              (swap/transfer) via a simple input box.
+            </li>
+            <li>Used tool calls to stream dynamic UI from the server.</li>
+            <li>
+              Integrated 1inch, Li.Fi, and Jupiter (Solana) for buy/sell/swap
+              flows.
+            </li>
+            <li>Built a Telegram bot reusing the web app's core functions.</li>
+          </ul>
         </div>
+
         <div class="experience-item">
-          <h3>Junior Software Developer at Kodex</h3>
-          <div class="meta">Remote | 2023</div>
-          <p>
-            Took some break, did some hackathons, learned Rust and then got
-            invitation to join Kodex, a startup working on ENS marketplace, got
-            to work with well expirenced seniors and got chance to apply my Rust
-            skills.
-          </p>
+          <h3>Junior Software Engineer — Kodex</h3>
+          <div class="meta">Remote | Apr 2023 - Jun 2024</div>
+          <ul>
+            <li>
+              Maintained an ENS sales bot (20k followers), fixing failures
+              caused by contract signature changes.
+            </li>
+            <li>
+              Bootstrapped a Next.js app to compare gas costs between smart
+              contracts using Anvil (mainnet fork) and Recharts.
+            </li>
+            <li>Wrote a Rust service to flag premium registrations.</li>
+            <li>
+              Built Rust REST APIs aggregating data from Reservoir, Postgres,
+              etc., into a single endpoint.
+            </li>
+            <li>
+              Developed a Node.js + TS Twitter chatbot using LangChain and
+              GPT-4.
+            </li>
+          </ul>
         </div>
+
         <div class="experience-item">
-          <h3>Software Developer at LazarusNetwork</h3>
-          <div class="meta">Remote | 2022</div>
-          <p>
-            Bootstrapped by same founder as Revotic, the founder invited me join
-            full time and the expirence from here went to the moon.
-          </p>
+          <h3>Software Developer — NetSepio</h3>
+          <div class="meta">Remote | Mar 2022 - Jul 2023</div>
+          <ul>
+            <li>
+              Built a Golang gateway to improve smart-contract integrations.
+            </li>
+            <li>
+              Captured review-event screenshots and stored references on-chain
+              via IPFS.
+            </li>
+            <li>
+              Created a TheGraph indexer to expose query APIs for the contract.
+            </li>
+          </ul>
         </div>
+
         <div class="experience-item">
-          <h3>Golang Intern at Revotic Engineering</h3>
-          <div class="meta">Remote | 2021 - 2022</div>
-          <p>
-            I always wondered how hard it is to create APIs of own, I learned
-            NodeJS and still was unhappy with performance, so decided to learn
-            Go, and immediatly decided to purse my career around it.
-          </p>
+          <h3>Software Developer — Lazarus Network</h3>
+          <div class="meta">Remote | Mar 2022 - Dec 2022</div>
+          <ul>
+            <li>
+              Worked on cybersecurity services (VPN, tunneling) and web3
+              marketplace tooling (MyriadFlow).
+            </li>
+            <li>
+              Delivered custom blockchain solutions for chains including Cosmos.
+            </li>
+            <li>
+              Migrated to Kubernetes (proposed/implemented) to scale workflows
+              (e.g., with Skaffold).
+            </li>
+          </ul>
         </div>
+
         <div class="experience-item">
-          <h3>Angular + Ionic Intern at Torit Innovations</h3>
-          <div class="meta">Remote - Bengaluru | 2020 - 2021</div>
-          <p>
-            I immedietly got this role after completing my previous internship,
-            here I got change to work on Ionic heavly and also there were client
-            projects. Here I got chance to meet amazing peoples.
-          </p>
+          <h3>Golang Developer — Revotic Engineering Pvt. Ltd.</h3>
+          <div class="meta">Remote | Nov 2021 - Mar 2022</div>
+          <ul>
+            <li>Implemented a web3 auth module with Golang and go-ethereum.</li>
+            <li>
+              Built Gin-based APIs and middleware securing privileged ERC-721
+              functions (e.g., <code>grantRole</code>).
+            </li>
+            <li>Assisted frontend teams integrating APIs and WalletConnect.</li>
+          </ul>
         </div>
+
         <div class="experience-item">
-          <h3>Angular Intern at Swabhav Tech Labs</h3>
-          <div class="meta">Remote - Mumbai | 2020</div>
-          <p>
-            I worked on real time projects with client and seniors. Also I lead
-            a team for Ionic App version of already live website.
-          </p>
+          <h3>Angular Developer — Torit Innovations</h3>
+          <div class="meta">Remote · Bengaluru | Dec 2020 - Jun 2021</div>
+          <ul>
+            <li>
+              Delivered Angular UIs with complex animations using Renderer2 and
+              lifecycle hooks.
+            </li>
+            <li>
+              Optimized micro-components and header transitions via event
+              handling and RxJS throttling/chaining.
+            </li>
+            <li>
+              Applied modular architecture with lazy loading for performance.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Angular Developer — Swabhav Techlabs</h3>
+          <div class="meta">Remote · Mumbai | Aug 2020 - Nov 2020</div>
+          <ul>
+            <li>Led an Ionic app effort for an existing e-commerce site.</li>
+            <li>
+              Improved Angular app performance and solved complex layout issues
+              with conditional rendering.
+            </li>
+          </ul>
         </div>
       </div>
+
+      <div class="section" id="education">
+        <h2>Education</h2>
+        <div class="experience-item">
+          <h3>Vishwakarma Institute of Technology</h3>
+          <div class="meta">B.Tech, Computer Science | Nov 2021 - Dec 2024</div>
+        </div>
+        <div class="experience-item">
+          <h3>Institute of Petrochemical Engineering, Lonere</h3>
+          <div class="meta">
+            High School Diploma, Computer Science | Sep 2018 - Sep 2021
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="section" id="projects">
+        <h2>My projects</h2>
+        <p>Details about my projects will be here soon.</p>
+      </div> -->
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var headings = document.querySelectorAll(".section[id] > h2");
+        headings.forEach(function (heading) {
+          var section = heading.parentElement;
+          var id = section.id;
+          heading.style.cursor = "pointer";
+          heading.addEventListener("click", function () {
+            if (history.pushState) {
+              history.pushState(null, "", "#" + id);
+            } else {
+              location.hash = id;
+            }
+            section.scrollIntoView({ behavior: "smooth" });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
